@@ -444,4 +444,39 @@
 - Fallback: 90 Hz/45 FPS; lower GI, Volumetrics, Shadows, then SSR.
 
 ## Update rule
+
+## Warhammer 40,000: Space Marine 2
+### QAM
+- Refresh rate: 30 Hz.
+- FPS limit: 30.
+- Allow Tearing: Off.
+- Half-Rate Shading: Off.
+- TDP Limit: Off.
+- Manual GPU Clock: Off.
+- Scaling Mode: Auto.
+- Scaling Filter: Linear.
+- SteamOS FSR: Off.
+- HDR: Not exposed in menu.
+### Display
+- Window mode: Fullscreen.
+- Resolution: 1280x720.
+- Render Resolution: Dynamic.
+- Dynamic Resolution target: 30 FPS.
+- Resolution Upscaling: FSR 2.
+- Resolution Upscaling mode: Performance.
+- V-Sync: Off.
+- FPS Limit: 30.
+- Motion Blur Intensity: Off.
+### Graphics
+- Preset: Low.
+- Texture Filtering: High.
+- Texture Resolution: Medium.
+- Shadows: Low.
+- Screen Space Ambient Occlusion: Default.
+- Screen Space Reflections: Off.
+- Volumetrics: Low.
+- Effects: Low.
+- Details: Low.
+- Cloth Simulation: Low.
+- Fallback: Keep the 30 FPS cap; lower the game resolution before using FSR Ultra Performance. Large horde encounters can still fall below 30 FPS.
 When a new game is requested, append a menu-verified, fully vertical bespoke entry without changing existing rules or entries. Keep only 20 W Performance and Custom 25/25/25 profiles.
