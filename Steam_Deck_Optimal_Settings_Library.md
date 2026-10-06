@@ -1,10 +1,56 @@
 # Steam Deck Optimal Settings Library
 
 ## Permanent rules
-- Use only settings exposed by the installed game menu or Steam Deck QAM.
-- List QAM, display, and every individual exposed graphics setting as separate bullets.
-- Mark unavailable controls as `Not exposed in menu`; never invent settings.
-- Prioritize the highest stable real FPS and consistent frametimes.
+
+### Settings and formatting
+- Provide bespoke settings for each game and device, rather than a generic preset.
+- List every QAM, AMD Adrenalin, Legion Space, display, and graphics control as a separate bullet where applicable.
+- Use only controls supported by documented menus or the installed software.
+- Mark controls as Not exposed only when their absence is verified.
+- Mark unresolved controls as Unverified; do not invent settings or selectable values.
+- Research published menus, documentation, and gameplay testing before requesting user screenshots.
+- Ask the user only for specific details that available evidence cannot resolve.
+
+### Performance evidence
+- Prioritize the highest sustainable real FPS with consistent frametimes.
+- Distinguish Recommended, Third-party measured, and Locally validated profiles.
+- Recommended means a researched starting point without sufficient measurements to establish sustained performance.
+- Third-party measured means results were captured on the same device model under documented conditions.
+- Locally validated means results were captured on the user's device under documented conditions.
+- Do not infer handheld performance from desktop benchmarks or a different handheld model.
+- Do not describe a target, cap, average FPS, or video title as a performance guarantee.
+- Count generated frames separately from real rendered frames.
+
+### Measurement requirements
+- Record the device model, game build, operating system, driver or Proton version, power profile, resolution, upscaler, and complete tested settings.
+- Record the capture tool and its metric definitions.
+- Report average FPS, 99th-percentile frametime, and notable stutters or target violations when available.
+- State the tested scene, mode, capture duration, and number of runs.
+- Include demanding combat or other representative worst-case scenes, not only menus or quiet traversal.
+- Disclose missing data rather than estimate benchmark results.
+- Describe results as valid for the recorded test conditions, not as guarantees for all gameplay.
+
+### Validation protocol
+- Use a warmed-up system and complete shader compilation where applicable.
+- As a library testing standard, capture at least three repeat runs of the same representative route.
+- Include a separate demanding-scene test.
+- Define the target and acceptance criteria before testing.
+- Report whether the profile passed those criteria and disclose exceptions.
+- If evidence does not support the target, recommend a lower cap or revised settings and label them for further validation.
+
+### Device-specific requirements
+- Steam Deck: List QAM settings separately from display and graphics settings.
+- Legion Go: Retain only Performance battery 20 W and Custom 25 W TDP / 25 W SPPT / 25 W FPPT profiles.
+- Legion Go: Omit Performance plugged 25 W, Quiet 8 W, and Balanced 15 W.
+- Use Integer Scaling only where the resolution, aspect ratio, and output scaling make it appropriate.
+- Keep Radeon Image Sharpening Off by default; do not stack sharpening methods.
+
+### Library maintenance
+- Preserve existing game entries unless the user explicitly requests their revision.
+- Append new entries using the complete current master files.
+- Include evidence status, measured results where available, limitations, and fallback settings for each new title.
+- Preserve the MARVEL Tōkon-only dropdown-verification exception.
+- Require approval of the exact write before committing changes to GitHub.
 
 ## DOOM Eternal
 ### QAM
@@ -416,3 +462,49 @@ When a new game is requested, append a menu-verified, fully vertical bespoke ent
 - Validation: Test demanding stages and multiple simultaneous effects before treating the profile as stable.
 - Fallback: Reduce Scaling Resolution in small steps if GPU-limited; do not substitute generated frames for the battle target.
 - Unverified controls: Confirm availability in the installed build; an unverified control is not classified as Not exposed.
+
+
+## Necromunda: Hired Gun
+### Evidence status
+- Classification: Recommended; not Third-party measured or Locally validated under the library's measurement requirements.
+- Game build: Unverified.
+- OS, driver, and Proton versions: Not recorded for these recommendations.
+- Average FPS: No qualifying capture available.
+- 99th-percentile frametime: No qualifying capture available.
+- Capture tool, duration, and repeat-run count: Not available.
+- Limitation: Complete graphics-menu labels and values remain partly unverified; recommendations below are not a claim of complete menu verification.
+### QAM
+- Refresh rate: 60 Hz.
+- FPS limit: 60.
+- Allow Tearing: Off.
+- Half-Rate Shading: Off.
+- TDP Limit: Off.
+- Manual GPU Clock: Off.
+- Scaling Mode: Auto.
+- Scaling Filter: Linear.
+- SteamOS FSR: Off.
+### Display
+- Screen Mode: Windowed Fullscreen.
+- Resolution: 1280x800.
+- V-Sync: Off.
+- Motion Blur: Off.
+- Field of View: 85, if selectable.
+### Graphics
+- Overall preset: Medium starting point; exact installed label is Unverified.
+- FSR 1.0 mode: Ultra Quality.
+- Anti-aliasing quality: High where exposed; exact installed label is Unverified.
+- Texture quality: Unverified; retain the selected preset's value.
+- Shadow quality: Unverified; retain the selected preset's value.
+- Post-processing: Medium where exposed; exact installed label is Unverified.
+- Special effects: Low where exposed; exact installed label is Unverified.
+- Screen-space reflections: Unverified; retain the selected preset's value.
+- Other individual quality controls: Unverified; do not add invented controls.
+### Sources
+- Steam Deck gameplay: https://www.youtube.com/watch?v=KeaEoaJxDHE
+- Graphics feature reference: https://www.pcgamingwiki.com/wiki/Necromunda:_Hired_Gun
+- PC performance discussion: https://www.reddit.com/r/NecromundaHiredGun/comments/nq6c2z/huge_performance_issues_on_pc_anyone_knows_any/
+- FSR comparison: https://videocardz.com/newz/amd-fsr-and-nvidia-dlss-comparison-shows-similar-quality-and-performance-at-4k-resolution-in-necromunda-hired-gun
+### Target and fallback
+- Target: 60 real FPS, not guaranteed.
+- Fallback: Use a 40 FPS cap with a compatible refresh rate if demanding combat cannot sustain 60 FPS; try FSR Quality if GPU-limited.
+- Validation: Record three repeat combat captures plus a demanding-scene test before assigning validated status.
