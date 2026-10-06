@@ -2,55 +2,80 @@
 
 ## Permanent rules
 
-### Settings and formatting
-- Provide bespoke settings for each game and device, rather than a generic preset.
-- List every QAM, AMD Adrenalin, Legion Space, display, and graphics control as a separate bullet where applicable.
-- Use only controls supported by documented menus or the installed software.
-- Mark controls as Not exposed only when their absence is verified.
-- Mark unresolved controls as Unverified; do not invent settings or selectable values.
-- Research published menus, documentation, and gameplay testing before requesting user screenshots.
-- Ask the user only for specific details that available evidence cannot resolve.
+### Bespoke menu-based settings
+- Provide bespoke recommendations for every existing and newly requested game, based on that title's documented display and graphics menus, not generic settings copied between games.
+- List every individual exposed display and graphics control separately, using its exact menu label wherever verified.
+- Recommend a specific value for each documented control; an overall preset is only a starting point or fallback, not a substitute for individual settings.
+- Tailor values separately for Steam Deck, Legion Go Performance battery 20 W, and Legion Go Custom 25/25/25.
+- Use only controls exposed by the game menu or supported driver/software; never invent controls or selectable values.
+- Mark verified unavailable controls as Not exposed in menu for Steam Deck and Not exposed for Legion Go.
+- Mark unresolved labels or values as Unverified; missing evidence does not establish absence.
+- Research published menu captures, documentation, and gameplay testing before requesting user screenshots; ask only for specific unresolved details.
+- Recheck affected menu controls after significant updates when reviewing a title.
+- Apply these rules whenever a title or review is requested; continuous application does not mean automatic background monitoring.
 
-### Performance evidence
-- Prioritize the highest sustainable real FPS with consistent frametimes.
-- Distinguish Recommended, Third-party measured, and Locally validated profiles.
-- Recommended means a researched starting point without sufficient measurements to establish sustained performance.
-- Third-party measured means results were captured on the same device model under documented conditions.
-- Locally validated means results were captured on the user's device under documented conditions.
-- Do not infer handheld performance from desktop benchmarks or a different handheld model.
-- Do not describe a target, cap, average FPS, or video title as a performance guarantee.
-- Count generated frames separately from real rendered frames.
+### Performance recommendations
+- Provide one recommended configuration per device, with the two retained Legion Go power profiles, rather than separate evidence-category profiles.
+- Base recommendations on applicable third-party measurements wherever available.
+- Define best as the highest sustainable real FPS with consistent frametimes, retaining the highest visual quality supported by the chosen target.
+- Evaluate Steam Deck and original Legion Go separately, and evaluate each Legion Go power profile separately.
+- Prefer reproducible testing on the exact device and power profile, matching the current game build, OS, driver or Proton version, resolution, upscaler, and settings.
+- Compare measured configurations where possible and explain why the recommendation is preferable.
+- Do not claim best measured from a single configuration without meaningful comparison.
+- Include relevant third-party results, sources, test conditions, limitations, and fallback settings.
+- When device-specific measurements are unavailable, provide evidence-informed recommendations and state the measurement gap.
+- Identify recommended changes that differ from the tested third-party configuration.
+- Do not require local benchmarking or validation from the user.
+- Do not divide profiles into Recommended, Third-party measured, and Locally validated categories.
+- Never invent benchmark results or describe untested settings as measured.
+- Do not infer measured handheld performance from desktop tests or another handheld model.
+- An FPS target, cap, average, or video title is not proof of sustained performance or a guarantee.
+- Count generated frames separately from real rendered frames; optimize base real-frame performance before recommending frame generation.
+- Treat FPS results as applicable to documented test conditions, not guarantees for all gameplay.
 
-### Measurement requirements
-- Record the device model, game build, operating system, driver or Proton version, power profile, resolution, upscaler, and complete tested settings.
-- Record the capture tool and its metric definitions.
-- Report average FPS, 99th-percentile frametime, and notable stutters or target violations when available.
-- State the tested scene, mode, capture duration, and number of runs.
-- Include demanding combat or other representative worst-case scenes, not only menus or quiet traversal.
-- Disclose missing data rather than estimate benchmark results.
-- Describe results as valid for the recorded test conditions, not as guarantees for all gameplay.
-
-### Validation protocol
-- Use a warmed-up system and complete shader compilation where applicable.
-- As a library testing standard, capture at least three repeat runs of the same representative route.
-- Include a separate demanding-scene test.
-- Define the target and acceptance criteria before testing.
-- Report whether the profile passed those criteria and disclose exceptions.
-- If evidence does not support the target, recommend a lower cap or revised settings and label them for further validation.
+### Third-party measurement requirements
+- Record the source, device model, game build, OS, driver or Proton version, power profile, resolution, upscaler, and tested settings where available.
+- Record the capture tool and metric definitions where available.
+- Report average FPS, 99th-percentile frametime, stutters, and target violations where available.
+- State the tested scene, mode, capture duration, and run count where available.
+- Prefer representative demanding gameplay over menus or quiet traversal alone.
+- Prefer warmed-up systems and completed shader compilation where applicable.
+- Prefer three repeat runs and a separate demanding-scene test; this is an evidence preference, not a user testing requirement.
+- Evaluate stated targets and acceptance criteria when supplied by the source; disclose exceptions and missing data rather than estimating results.
+- When evidence does not support the target, recommend a lower cap or revised settings with an explanation.
 
 ### Device-specific requirements
-- Steam Deck: List QAM settings separately from display and graphics settings.
-- Legion Go: Retain only Performance battery 20 W and Custom 25 W TDP / 25 W SPPT / 25 W FPPT profiles.
+- List QAM, AMD Adrenalin, Legion Space, display, and game-menu controls as separate bullets under their appropriate headings.
+- Steam Deck: List QAM separately from display and graphics; use only exposed QAM controls and prioritize stable real FPS and frametimes.
+- Legion Go: List AMD Adrenalin and Legion Space separately from display and game settings.
+- Legion Go: Retain only Performance battery 20 W and Custom 25 W TDP / 25 W SPPT / 25 W FPPT.
 - Legion Go: Omit Performance plugged 25 W, Quiet 8 W, and Balanced 15 W.
-- Use Integer Scaling only where the resolution, aspect ratio, and output scaling make it appropriate.
+- Use Integer Scaling only where resolution, aspect ratio, and output scaling make it appropriate.
 - Keep Radeon Image Sharpening Off by default; do not stack sharpening methods.
 
+### Existing and new game reviews
+- Apply all standards to both existing titles and new requests.
+- A policy change does not establish that existing entries have been benchmark-audited or menu-verified.
+- Audit existing entries against applicable measurements and identify unsupported performance claims.
+- Retain supported settings; revise them when stronger applicable evidence supports a better configuration.
+- State whether a review is complete or pending without creating separate performance-profile categories.
+- Reassess affected entries after significant game, driver, Proton, or OS changes.
+- Provisional preset-based entries with unresolved individual controls are not completed bespoke menu reviews.
+
+### MARVEL Tōkon-only exception
+- For MARVEL Tōkon: Fighting Souls only, complete dropdown-choice verification is waived; recommend the best value for documented controls.
+- Keep uncertain controls and values explicit; do not invent them or infer absence.
+- This exception does not waive performance-evidence requirements and does not extend to other titles.
+
 ### Library maintenance
-- Preserve existing game entries unless the user explicitly requests their revision.
-- Append new entries using the complete current master files.
-- Include evidence status, measured results where available, limitations, and fallback settings for each new title.
-- Preserve the MARVEL Tōkon-only dropdown-verification exception.
-- Require approval of the exact write before committing changes to GitHub.
+- Use the complete current master files as the baseline for every update.
+- Preserve permanent rules, unrelated entries, and user preferences.
+- Append new games as fully vertical bespoke entries without removing existing titles.
+- Allow evidence-backed revisions to existing entries under this standing policy; document reasons and show changes before committing.
+- Do not rewrite unrelated entries during a single-title update.
+- Preserve existing game content during rules-only updates; flag incomplete reviews honestly.
+- Keep research, file generation, GitHub commits, and verification separate and report their status clearly.
+- Require approval of the exact resolved write before committing changes to GitHub.
 
 ## DOOM Eternal
 ### AMD Adrenalin
@@ -595,14 +620,6 @@
 
 
 ## Necromunda: Hired Gun
-### Evidence status
-- Classification: Recommended; not Third-party measured or Locally validated under the library's measurement requirements.
-- Game build: Unverified.
-- OS, driver, and Proton versions: Not recorded for these recommendations.
-- Average FPS: No qualifying capture available.
-- 99th-percentile frametime: No qualifying capture available.
-- Capture tool, duration, and repeat-run count: Not available.
-- Limitation: Complete graphics-menu labels and values remain partly unverified; recommendations below are not a claim of complete menu verification.
 ### AMD Adrenalin
 - GPU Scaling: On.
 - Scaling Mode: Full Panel.
@@ -634,7 +651,7 @@
 - Motion Blur: Off.
 - Field of View: 85, if selectable.
 ### Graphics
-- Overall preset: Medium starting point at 20 W; High starting point on Custom. Exact installed labels are Unverified.
+- Overall preset: Medium starting point at 20 W; High starting point on Custom. Exact labels are Unverified.
 - FSR 1.0 mode: Off initially; Ultra Quality if GPU-limited below target.
 - Anti-aliasing quality: High where exposed; exact installed label is Unverified.
 - Texture quality: Unverified; retain the selected preset's value.
@@ -643,12 +660,14 @@
 - Special effects: Low where exposed; exact installed label is Unverified.
 - Screen-space reflections: Unverified; retain the selected preset's value.
 - Other individual quality controls: Unverified; do not add invented controls.
-### Sources
-- Steam Deck gameplay: https://www.youtube.com/watch?v=KeaEoaJxDHE
-- Graphics feature reference: https://www.pcgamingwiki.com/wiki/Necromunda:_Hired_Gun
+### Evidence and limitations
+- Complete individual menu review: Pending. Preset recommendations are provisional and are not a completed bespoke menu review.
+- Recommendations are starting points, not measured performance guarantees.
+- Game build, OS/driver/Proton versions, capture tool, duration, run count, average FPS, and 99th-percentile frametime: Not available for these recommendations.
+- Steam Deck gameplay source: https://www.youtube.com/watch?v=KeaEoaJxDHE
+- Graphics reference: https://www.pcgamingwiki.com/wiki/Necromunda:_Hired_Gun
 - PC performance discussion: https://www.reddit.com/r/NecromundaHiredGun/comments/nq6c2z/huge_performance_issues_on_pc_anyone_knows_any/
-- FSR comparison: https://videocardz.com/newz/amd-fsr-and-nvidia-dlss-comparison-shows-similar-quality-and-performance-at-4k-resolution-in-necromunda-hired-gun
+- Original Legion Go device-specific measurements: Unavailable.
 ### Target and fallback
-- Target: 60 real FPS for both power profiles, not guaranteed.
-- Fallback: Lower the overall preset or enable FSR Ultra Quality before reducing output resolution; use a 30 FPS cap at 60 Hz if no stable higher target is achievable.
-- Validation: Benchmark each power profile separately using three repeat combat captures and a demanding-scene test.
+- Target: 60 real FPS for both profiles, not guaranteed.
+- Fallback: Lower the preset or use FSR Ultra Quality before reducing output resolution; use 30 FPS at 60 Hz if no stable higher target is achievable.
