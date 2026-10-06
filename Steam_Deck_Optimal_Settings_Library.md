@@ -373,3 +373,46 @@
 - Cloth Simulation: Low.
 - Fallback: Keep the 30 FPS cap; lower the game resolution before using FSR Ultra Performance. Large horde encounters can still fall below 30 FPS.
 When a new game is requested, append a menu-verified, fully vertical bespoke entry without changing existing rules or entries.
+
+## MARVEL Tōkon: Fighting Souls
+### Title-specific exception
+- Scope: For this title only, complete dropdown-choice verification is waived by the user; values below are recommended starting points, not a menu-verified or device-tested profile.
+- Preservation: Permanent rules and all other title entries remain unchanged.
+### QAM
+- Refresh rate: 60 Hz.
+- FPS limit: 60.
+- Allow Tearing: Off.
+- Half-Rate Shading: Off.
+- TDP Limit: Off.
+- Manual GPU Clock: Off.
+- Scaling Mode: Auto.
+- Scaling Filter: Linear.
+- SteamOS FSR: Off.
+### Display
+- Display Mode: Borderless Window.
+- Output Display: Built-in display.
+- Brightness Settings: Default; adjust to the on-screen calibration.
+- Motion Blur: Off.
+- Resolution: 1280x720, if selectable.
+- Vertical Sync: Off.
+- Anti-aliasing Type: TSR, if selectable.
+- Sharpness Quality: 0 initially; do not stack driver sharpening.
+- Scaling Resolution: 50 initially, if selectable; this is an untested conservative Steam Deck recommendation.
+### Graphics
+- Graphics Quality: Custom.
+- Auto Graphics Quality Settings: Do not run after applying this custom profile.
+- Anti-aliasing Quality: Medium Quality, if selectable.
+- Post-processing Quality: Medium Quality, if selectable.
+- Global Illumination Quality: Low Quality, if selectable.
+- Reflection Quality: Low Quality, if selectable.
+- Texture Quality: Medium Quality, if selectable.
+- Shadow Quality: Low Quality, if selectable.
+- Effect Quality: Low Quality, if selectable.
+- Launch Shader Warmup: On.
+- Execute Shader Warmup: Run before first play and after game or driver updates.
+- Revert to Defaults: Do not activate after applying this profile.
+### Validation
+- Target: 60 real FPS during battles; sustained performance is not verified on this device.
+- Validation: Test demanding stages and multiple simultaneous effects before treating the profile as stable.
+- Fallback: Reduce Scaling Resolution in small steps if GPU-limited; do not substitute generated frames for the battle target.
+- Unverified controls: Confirm availability in the installed build; an unverified control is not classified as Not exposed.
